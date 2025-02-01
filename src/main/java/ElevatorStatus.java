@@ -1,0 +1,3 @@
+interface ElevatorStatus {
+    ElevatorState state();
+}
