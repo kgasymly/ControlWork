@@ -9,14 +9,14 @@ class ElevatorCall implements Call {
     public void makeCall(int floor) throws Exception {
         boolean allBusy = true;
         for (Elevator elevator : elevators) {
-            if (elevator.state == ElevatorState.STATIONARY || elevator.state == ElevatorState.OUT_OF_ORDER) {
+            if (elevator.state == ElevatorState.STATIONARY) {
                 allBusy = false;
                 elevator.call(floor);
                 return;
             }
         }
         if (allBusy) {
-            throw new Exception("Все лифты заняты!" + " Лифт № " + floor);
-        }
+            throw new Exception("Все лифты заняты!");
+        } else {}
     }
 }

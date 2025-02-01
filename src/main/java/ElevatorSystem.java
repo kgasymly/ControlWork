@@ -24,7 +24,7 @@ class ElevatorSystem {
                 try {
                     elevatorCall.makeCall(requestedFloor);
                 } catch (Exception e) {
-                    System.out.println("Ошибка: " + e.getMessage());
+                    System.out.println(e.getMessage());
                 }
             }
 

@@ -11,6 +11,10 @@ class EvenFloorElevator extends Elevator {
         } else if (floor % 2 == 0) {
             this.destinationFloor = floor;
             this.state = ElevatorState.MOVING_DOWN; // Пример: движется вниз
+        } else if (floor % 2 == 0) {
+            this.destinationFloor = floor;
+            this.state = ElevatorState.STATIONARY;
+            System.out.println("Лифт бездействует");
         } else {
             throw new IllegalArgumentException("Невозможно вызвать лифт для четного этажа на нечетный этаж." + " Лифт № " + floor);
         }
