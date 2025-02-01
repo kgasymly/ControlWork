@@ -9,7 +9,7 @@ class ElevatorCall implements Call {
     public void makeCall(int floor) throws Exception {
         boolean allBusy = true;
         for (Elevator elevator : elevators) {
-            if (elevator.state == ElevatorState.STATIONARY) {
+            if (elevator.state == ElevatorState.STATIONARY || elevator.state == ElevatorState.OUT_OF_ORDER) {
                 allBusy = false;
                 elevator.call(floor);
                 return;
