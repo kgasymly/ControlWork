@@ -8,8 +8,11 @@ class OddFloorElevator extends Elevator {
         if (floor % 2 != 0) {
             this.destinationFloor = floor;
             this.state = ElevatorState.MOVING_UP; // Пример: движется вверх
+        } else if (floor % 2 != 0) {
+            this.destinationFloor = floor;
+            this.state = ElevatorState.MOVING_DOWN;
         } else {
-            throw new IllegalArgumentException("Невозможно вызвать лифт для нечетного этажа на четный этаж.");
+            throw new IllegalArgumentException("Невозможно вызвать лифт для нечетного этажа на четный этаж." + " Лифт № " + floor);
         }
     }
 }

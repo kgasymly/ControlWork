@@ -12,7 +12,7 @@ class EvenFloorElevator extends Elevator {
             this.destinationFloor = floor;
             this.state = ElevatorState.MOVING_DOWN; // Пример: движется вниз
         } else {
-            throw new IllegalArgumentException("Невозможно вызвать лифт для четного этажа на нечетный этаж.");
+            throw new IllegalArgumentException("Невозможно вызвать лифт для четного этажа на нечетный этаж." + " Лифт № " + floor);
         }
     }
 }
