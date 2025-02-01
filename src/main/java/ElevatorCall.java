@@ -17,6 +17,6 @@ class ElevatorCall implements Call {
         }
         if (allBusy) {
             throw new Exception("Все лифты заняты!");
-        } else {}
+        }
     }
 }
