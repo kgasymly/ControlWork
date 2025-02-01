@@ -1,3 +1,3 @@
-interface ElevatorStatus {
+public interface ElevatorStatus {
     ElevatorState state();
 }
